@@ -1,9 +1,11 @@
 import { View, Text, StyleSheet,Button } from 'react-native';
+import { Link } from 'expo-router';
 
-export default function sixweek_coursesScreen() {
+export default function landscapingScreen() {
   return (
     <View style={styles.container}>
-      <Text>Summary of six-week Courses</Text>
+      <Text>Landscaping</Text>
+      
     </View>
   );
 }

@@ -1,10 +1,10 @@
+import { View, Text, StyleSheet,Button } from 'react-native';
 import { Link } from 'expo-router';
-import { View, Text, StyleSheet, Button } from 'react-native';
 
-export default function HomeScreen() {
+export default function lifeskillsScreen() {
   return (
     <View style={styles.container}>
-      <Text>Empowering the nation</Text>
+      <Text>Life skills</Text>
       
     </View>
   );
@@ -17,4 +17,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-

@@ -1,9 +1,11 @@
 import { View, Text, StyleSheet,Button } from 'react-native';
+import { Link } from 'expo-router';
 
-export default function calculatefeesScreen() {
+export default function firstaidScreen() {
   return (
     <View style={styles.container}>
-      <Text>Calculate total fees</Text>
+      <Text>First aid</Text>
+      
     </View>
   );
 }
