@@ -12,10 +12,10 @@ export default function sixmonthLayout() {
           fontWeight: 'bold',
         },
       }}>
-      <Stack.Screen name="firstaid" />
-      <Stack.Screen name="landscaping" />
-      <Stack.Screen name="sewing" />
-      <Stack.Screen name="lifeskills" />
+      <Stack.Screen name="firstaid" options={{title :'First aid'}}/>
+      <Stack.Screen name="landscaping" options={{title :'Landscaping'}}/>
+      <Stack.Screen name="sewing" options={{title :'Sewing'}}/>
+      <Stack.Screen name="lifeskills" options={{title :'Life skills'}}/>
      
     </Stack>
   );

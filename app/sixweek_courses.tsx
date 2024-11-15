@@ -5,9 +5,9 @@ export default function sixweek_coursesScreen() {
   return (
     <View style={styles.container}>
       <Text>Summary of six-week Courses</Text>
-      <Link href='./sixweek/childminding'>Childminding</Link>
-      <Link href='./sixweek/cooking'>Cooking</Link>
-      <Link href='./sixweek/gardenmaintenance'>Garden maintenance</Link>
+      <Link href='./(sixweek)/childminding'>Childminding</Link>
+      <Link href='./(sixweek)/cooking'>Cooking</Link>
+      <Link href='./(sixweek)/gardenmaintenance'>Garden maintenance</Link>
     </View>
   );
 }

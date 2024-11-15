@@ -12,9 +12,9 @@ export default function sixweekLayout() {
           fontWeight: 'bold',
         },
       }}>
-      <Stack.Screen name="childminding" />
-      <Stack.Screen name="cooking" />
-      <Stack.Screen name="gardenmaintenance" />
+      <Stack.Screen name="childminding" options={{title :'Child minding'}}/>
+      <Stack.Screen name="cooking" options={{title :'Cooking'}}/>
+      <Stack.Screen name="gardenmaintenance" options={{title :'Garden maintenance'}}/>
      
     </Stack>
   );

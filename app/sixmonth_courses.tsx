@@ -6,10 +6,10 @@ export default function sixmonth_coursesScreen() {
   return (
     <View style={styles.container}>
       <Text>Summary of six-month Courses</Text>
-      <Link href='./sixmonth/firstaid'>First aid</Link>
-      <Link href='./sixmonth/landscaping'>Landscaping</Link>
-      <Link href='./sixmonth/sewing'>Sewing</Link>
-      <Link href='./sixmonth/lifeskills'>Life skills</Link>
+      <Link href='./(sixmonth)/firstaid'>First aid</Link>
+      <Link href='./(sixmonth)/landscaping'>Landscaping</Link>
+      <Link href='./(sixmonth)/sewing'>Sewing</Link>
+      <Link href='./(sixmonth)/lifeskills'>Life skills</Link>
     </View>
   );
 }
