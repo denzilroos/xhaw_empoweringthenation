@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TextInput,
+  Button,
+  Alert,
+} from 'react-native';
 import Checkbox from 'expo-checkbox';
 
 // Define the type for an item
@@ -23,7 +31,7 @@ const App: React.FC = () => {
   ]);
 
   // Calculate total price with discount
-  const calculateTotal = (): { subtotal: number; discount: number; total: number } => {
+  const calculateTotal = (): { subtotal: number; discount: number; total: number; totalVat:number } => {
     // Subtotal calculation
     const subtotal = items.reduce((total, item) => {
       return item.selected ? total + item.price : total;
@@ -34,22 +42,20 @@ const App: React.FC = () => {
     
     // Apply discount based on the number of selected items
     let discount = 0;
-    if (selectedCount >= 5) {
-      discount = subtotal * 1; // 30% discount for 4 or more items
-    }
+
     if (selectedCount >= 4) {
       discount = subtotal * 0.15; // 30% discount for 4 or more items
     }
-    if (selectedCount >= 3) {
+    if (selectedCount === 3) {
       discount = subtotal * 0.1; // 20% discount for 3 or more items
     } else if (selectedCount === 2) {
       discount = subtotal * 0.05; // 10% discount for 2 items
     }
 
     // Final total
-    const total = subtotal - discount;
-
-    return { subtotal, discount, total };
+    const total = subtotal - discount ;
+    const totalVat =total + (total*0.15)
+    return { subtotal, discount, total, totalVat };
   };
 
   // Handle checkbox toggle
@@ -61,34 +67,88 @@ const App: React.FC = () => {
     );
   };
 
-  const { subtotal, discount, total } = calculateTotal();
+  const { subtotal, discount, total, totalVat } = calculateTotal();
+
+    // User Details State
+    const [userDetails, setUserDetails] = useState({
+      name: '',
+      phone: '',
+      email: '',
+    });
+
+      // Handle Form Submission
+  const handleFormSubmit = () => {
+    const { name, phone, email } = userDetails;
+
+    // Basic validation
+    if (!name || !phone || !email) {
+      Alert.alert('Error', 'Please fill in all the fields.');
+      return;
+    }
+
+    Alert.alert(
+      'Details Submitted',
+      `Name: ${name}\nPhone: ${phone}\nEmail: ${email}`
+    );
+  };
 
   return (
+
+    
+    
     <View style={styles.container}>
-      <Text style={styles.title}>Select Items</Text>
-      <FlatList
-        data={items}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Checkbox
-              value={item.selected}
-              onValueChange={() => toggleCheckbox(item.id)}
-              style={styles.checkbox}
-            />
-            <Text style={styles.itemText}>
-              {item.name} - R{item.price}
-            </Text>
-          </View>
-        )}
-      />
-      <View style={styles.totalContainer}>
-        <Text style={styles.totalText}>Subtotal: R{subtotal.toFixed(2)}</Text>
-        <Text style={styles.discountText}>Discount: -R{discount.toFixed(2)}</Text>
-        <Text style={styles.totalText}>Total: R{total.toFixed(2)}</Text>
-      </View>
+        <Text style={styles.title}>Select Course</Text>
+        <FlatList
+          data={items}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <View style={styles.item}>
+              <Checkbox
+                value={item.selected}
+                onValueChange={() => toggleCheckbox(item.id)}
+                style={styles.checkbox} />
+              <Text style={styles.itemText}>
+                {item.name} - R{item.price}
+              </Text>
+            </View>
+          )} />
+        <View style={styles.totalContainer}>
+          <Text style={styles.totalText}>Subtotal: R{subtotal.toFixed(2)}</Text>
+          <Text style={styles.discountText}>Discount: -R{discount.toFixed(2)}</Text>
+          <Text style={styles.totalText}>Total: R{total.toFixed(2)}</Text>
+          <Text style={styles.totalText}>Total +VAT: R{totalVat.toFixed(2)}</Text>
+        </View>
+      
+
+     
+      <View style={styles.formContainer}>
+      <Text style={styles.formTitle}>Enter Your Details</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Name"
+        value={userDetails.name}
+        onChangeText={(text) => setUserDetails({ ...userDetails, name: text })} />
+      <TextInput
+        style={styles.input}
+        placeholder="Phone Number"
+        keyboardType="phone-pad"
+        value={userDetails.phone}
+        onChangeText={(text) => setUserDetails({ ...userDetails, phone: text })} />
+      <TextInput
+        style={styles.input}
+        placeholder="Email Address"
+        keyboardType="email-address"
+        value={userDetails.email}
+        onChangeText={(text) => setUserDetails({ ...userDetails, email: text })} />
+      <Button title="Submit" onPress={handleFormSubmit} />
     </View>
+    
+
+
+      </View>
   );
+
+  
 };
 
 const styles = StyleSheet.create({
@@ -131,6 +191,26 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'green',
     marginTop: 5,
+  },
+  formContainer: {
+    marginTop: 30,
+    padding: 15,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+  },
+  formTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    fontSize: 16,
+    marginBottom: 15,
   },
 });
 
