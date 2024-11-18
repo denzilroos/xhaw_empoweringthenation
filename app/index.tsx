@@ -6,11 +6,13 @@ export default function HomeScreen() {
   return (
     
     <View style={styles.container}>
-    <ImageBackground source={require('../assets/images/empowering-the-nation-logo1.png')}style={styles.bgimgcontainer}>
+      
+    <ImageBackground source={require('../assets/images/group-five-african-college-students-spending-time-together-campus-university-yard-black-afro-friends-studying-bench-with-school-items-laptops-notebookscropsize.jpg')}style={styles.bgimgcontainer}>
    
+    <Image source={require('../assets/images/empowering-the-nation-logo1.png')} style={styles.imgcontainer}/>
       
-      <Image source={require('../assets/images/empowering-the-nation-logo1.png')} style={styles.imgcontainer}/>
-      
+      <Text></Text>
+      <Text></Text>
 
       <Link style={styles.linkcontainer} href="/sixmonth_courses">Six month courses</Link>
       <Link style={styles.linkcontainer} href="/sixweek_courses">Six week courses</Link>
@@ -36,26 +38,31 @@ const styles = StyleSheet.create({
   },
 
   linkcontainer: {
-    flex: 0.1,
+    flex: 0.08,
     justifyContent: 'center',
     alignItems: 'center',
     //marginBottom:50,
     textAlign:'center',
     fontSize: 18,
     borderWidth: 4,
-    borderColor: '#20232a',
+    borderColor: '#5c81bd',
     borderRadius: 20,
     padding:20,
     backgroundColor:'#ccf2ff',
-    marginBottom:20
+    marginBottom:50,
+    
     
   },  
 
 imgcontainer: {
-  flex: 1,
+  flex: 0.4,
   justifyContent:'center',
-  alignItems: 'center',
+ // alignItems: 'center',
   resizeMode:'center',
+  //borderWidth: 4,
+ // borderColor: '#20232a',
+  //borderRadius: 20,
+  
   
 },
 
