@@ -19,7 +19,7 @@ export default function childmindingScreen() {
       <Text>• Educational toys </Text>
       </View>
 
-      <Image source={{uri:'https://www.freepik.com/free-ai-image/young-child-with-autism-playing-with-family_138384868.htm#fromView=search&page=5&position=10&uuid=09f2065b-8599-4344-8d5b-43d3cc36fc3f'}} style={styles.imgcontainer}/>
+      <Image source={{uri:'https://img.freepik.com/free-photo/young-child-with-autism-playing-with-family_23-2151241990.jpg?t=st=1731928465~exp=1731932065~hmac=4a6968f7a69b357008b775ee3426274134eff6bf3fc7951be6ad3937c29824ae&w=996'}} style={styles.imgcontainer}/>
     </View>
   );
 }

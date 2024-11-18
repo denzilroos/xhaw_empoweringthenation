@@ -11,8 +11,13 @@ export default function HomeScreen() {
    
     <Image source={require('../assets/images/empowering-the-nation-logo1.png')} style={styles.imgcontainer}/>
       
-      <Text></Text>
-      <Text></Text>
+      
+      <View style={styles.summarycontainer}>
+      <Text>Empowering the Nation was established in 2018 and offers courses in Johannesburg. 
+Hundreds of domestic workers and gardeners have been trained on both the six-month long 
+Learnerships and six-week Short Skills Training Programmes to empower themselves and 
+can provide more marketable skills.  </Text>
+</View>
 
       <Link style={styles.linkcontainer} href="/sixmonth_courses">Six month courses</Link>
       <Link style={styles.linkcontainer} href="/sixweek_courses">Six week courses</Link>
@@ -36,9 +41,19 @@ const styles = StyleSheet.create({
     backgroundColor:'#20232a'
     
   },
+  summarycontainer: {
+    flex: 0,
+    justifyContent:'center',
+    alignItems: 'center',
+    backgroundColor:'#e6ffe6',
+    borderRadius:20,
+    margin:10,
+    padding:20
+    
+  },
 
   linkcontainer: {
-    flex: 0.08,
+    flex: 0,
     justifyContent: 'center',
     alignItems: 'center',
     //marginBottom:50,
@@ -47,9 +62,9 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: '#5c81bd',
     borderRadius: 20,
-    padding:20,
+    padding:10,
     backgroundColor:'#ccf2ff',
-    marginBottom:50,
+    marginBottom:20,
     
     
   },  

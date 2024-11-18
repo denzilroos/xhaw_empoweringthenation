@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet,Button,Image } from 'react-native';
+import { View, Text, StyleSheet,Button,Image} from 'react-native';
 import { Link } from 'expo-router';
 
 
@@ -22,7 +22,7 @@ export default function firstaidScreen() {
  <Text>• Respiratory distress e.g., Choking, blocked airway </Text>
  </View>
 
- <Image source={{uri:'https://www.freepik.com/free-photo/people-are-practicing-medicine_11191470.htm#fromView=search&page=2&position=6&uuid=66c5d83d-bf2e-4548-bc67-9ac723d7f745'}} style={styles.imgcontainer}/>
+ <Image source={{uri:'https://img.freepik.com/free-photo/people-are-practicing-medicine_1157-42457.jpg?t=st=1731927425~exp=1731931025~hmac=384a0c0edfadf3d7bb50d198836d08bfe0c83bd49f37be39d8f04e12cb97b847&w=996'}} style={styles.imgcontainer}/>
     </View>
   );
 }
@@ -57,9 +57,9 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center',
     resizeMode:'center',
-    //borderWidth: 4,
-   // borderColor: '#20232a',
-   // borderRadius: 20,
+    borderWidth: 4,
+    borderColor: '#20232a',
+    borderRadius: 20,
     //width:400,
     //height:400
   }

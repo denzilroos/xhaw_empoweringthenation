@@ -19,7 +19,7 @@ export default function cookingScreen() {
       <Text>• Preparation and cooking of meals</Text>
       </View>
 
-      <Image source={{uri:'https://www.freepik.com/free-photo/chef-with-apron-cooking-dish-kitchen_11228868.htm#fromView=search&page=13&position=15&uuid=be4c1b08-5941-4b8a-a1a5-bb7c16f9cd89'}} style={styles.imgcontainer}/>
+      <Image source={{uri:'https://img.freepik.com/free-photo/chef-with-apron-cooking-dish-kitchen_23-2148763125.jpg?t=st=1731928500~exp=1731932100~hmac=ac11e483dbb95de7f14e7a6aed4d0d95511a2bc58f9e008dc97e6216e3014dec&w=900'}} style={styles.imgcontainer}/>
     </View>
   );
 }

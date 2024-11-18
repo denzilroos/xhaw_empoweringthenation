@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet,Button,Image } from 'react-native';
 import { Link } from 'expo-router';
 
+
 export default function landscapingScreen() {
   return (
     <View style={styles.container}>
@@ -20,7 +21,7 @@ export default function landscapingScreen() {
      <Text>• Garden layout </Text>
      </View>
 
-     <Image source={{uri:'https://www.freepik.com/free-photo/smiling-afro-gardener-using-hedge-trimmer-cutting-bushes_26767481.htm#fromView=search&page=12&position=34&uuid=bc527700-8bc0-4685-9edf-b0244ff88f09'}} style={styles.imgcontainer}/>
+     <Image source={{uri:'https://img.freepik.com/free-photo/smiling-afro-gardener-using-hedge-trimmer-cutting-bushes_651396-1479.jpg?t=st=1731927928~exp=1731931528~hmac=ade1e0874323475089a3c74b4ab682ebbff83a966d437cf8f39e3796f168ef31&w=996'}} style={styles.imgcontainer}/>
 
     </View>
   );

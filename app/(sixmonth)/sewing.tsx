@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet,Button,Image } from 'react-native';
 import { Link } from 'expo-router';
 
+
 export default function sewingScreen() {
   return (
     <View style={styles.container}>
@@ -20,7 +21,7 @@ export default function sewingScreen() {
      <Text>• Designing and sewing new garments </Text>
      </View>
 
-     <Image source={{uri:'https://www.freepik.com/free-photo/two-african-dressmaker-woman-sews-clothes-sewing-machine-tailor-office-black-seamstress-girls_29371239.htm#fromView=search&page=1&position=12&uuid=09f2065b-8599-4344-8d5b-43d3cc36fc3f'}} style={styles.imgcontainer}/>
+     <Image source={{uri:'https://img.freepik.com/free-photo/two-african-dressmaker-woman-sews-clothes-sewing-machine-tailor-office-black-seamstress-girls_627829-13693.jpg?t=st=1731928364~exp=1731931964~hmac=3a98d2382f9250eb4e14baf3a7e2f9e852dc52f8908b654d4d02fe0d50766cec&w=996'}} style={styles.imgcontainer}/>
     </View>
   );
 }
