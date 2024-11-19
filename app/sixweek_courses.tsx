@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     //justifyContent: 'center',
-    alignItems: 'center',
+    //alignItems: 'center',
   },
   summarycontainer: {
     flex: 0,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     
   },
   linkcontainer: {
-    flex: 0.08,
+    flex: 0,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom:20,

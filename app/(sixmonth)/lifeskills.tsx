@@ -20,7 +20,7 @@ export default function lifeskillsScreen() {
      <Text>• Basic numeric literacy </Text>
      </View>
 
-     <Image source={{uri:'https://www.freepik.com/free-photo/young-student-working-assignment_22377280.htm#fromView=search&page=4&position=44&uuid=0ec25e9a-01c1-4277-84c3-2a7cde0d9d52'}} style={styles.imgcontainer}/>
+     <Image source={{uri:'https://img.freepik.com/free-photo/daughter-father-doing-homework_23-2148969808.jpg?t=st=1731997679~exp=1732001279~hmac=a7bcdd038bf23dafbe50efce04762a249a32b9b62c74918533000214d4cd679c&w=996'}} style={styles.imgcontainer}/>
     </View>
   );
 }
