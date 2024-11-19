@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet,Button,ImageBackground } from 'react-native';
+import { View, Text, StyleSheet,ImageBackground } from 'react-native';
 import { Link } from 'expo-router';
 
 export default function sixweek_coursesScreen() {
@@ -22,8 +22,7 @@ export default function sixweek_coursesScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
-    //alignItems: 'center',
+    
   },
   summarycontainer: {
     flex: 0,
@@ -31,7 +30,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor:'#e6ffe6',
     borderRadius:20,
-    //margin:10,
     padding:20
     
   },

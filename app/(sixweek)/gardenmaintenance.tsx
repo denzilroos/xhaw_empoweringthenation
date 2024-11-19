@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet,Button,Image } from 'react-native';
-import { Link } from 'expo-router';
+import { View, Text, StyleSheet,Image } from 'react-native';
+
 
 
 export default function gardenmaintenanceScreen() {
@@ -22,45 +22,27 @@ export default function gardenmaintenanceScreen() {
       <Image source={{uri:'https://img.freepik.com/free-photo/gardener-with-weedwacker-cutting-grass-garden_329181-20539.jpg?t=st=1731922527~exp=1731926127~hmac=1562fc73888b08e94e99eb3348f3facef53dcd8aa90c59829426e5732216c6bc&w=996'}} style={styles.imgcontainer}/>
       
     </View>
-    
-    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1.2,
-    //justifyContent: 'center',
-    //alignItems: 'center',
     textAlign:'left',
-    //borderWidth: 4,
-    //borderColor: '#20232a',
-    //borderRadius: 20,
     margin:20
   },
   contentcontainer: {
     flex: 1.2,
-    //justifyContent: 'center',
-    //alignItems: 'center',
     textAlign:'left',
     borderWidth: 1,
     borderColor: '#20232a',
     borderRadius: 20,
-    
     padding:20
-   
-
-    //margin:20
   },
   imgcontainer: {
     flex: 0.5,
     justifyContent:'center',
     alignItems: 'center',
     resizeMode:'center',
-    //borderWidth: 4,
-   // borderColor: '#20232a',
-   // borderRadius: 20,
-    //width:400,
-    //height:400
   }
 });

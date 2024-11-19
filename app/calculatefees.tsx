@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  TextInput,
-  Button,
-  Alert,
-} from 'react-native';
+import {StyleSheet,  Text,  View,  FlatList,  TextInput,  Button,  Alert,} from 'react-native';
 import Checkbox from 'expo-checkbox';
 
 // Define the type for an item
@@ -44,12 +36,12 @@ const App: React.FC = () => {
     let discount = 0;
 
     if (selectedCount >= 4) {
-      discount = subtotal * 0.15; // 30% discount for 4 or more items
+      discount = subtotal * 0.15; // 15% discount for 4 or more items
     }
     if (selectedCount === 3) {
-      discount = subtotal * 0.1; // 20% discount for 3 or more items
+      discount = subtotal * 0.1; // 10% discount for 3 or more items
     } else if (selectedCount === 2) {
-      discount = subtotal * 0.05; // 10% discount for 2 items
+      discount = subtotal * 0.05; // 5% discount for 2 items
     }
 
     // Final total
@@ -92,10 +84,7 @@ const App: React.FC = () => {
     );
   };
 
-  return (
-
-    
-    
+  return ( 
     <View style={styles.container}>
         <Text style={styles.title}>Select Course</Text>
         <FlatList
@@ -118,9 +107,7 @@ const App: React.FC = () => {
           <Text style={styles.totalText}>Total: R{total.toFixed(2)}</Text>
           <Text style={styles.totalText}>Total +VAT: R{totalVat.toFixed(2)}</Text>
         </View>
-      
 
-     
       <View style={styles.formContainer}>
       <Text style={styles.formTitle}>Enter Your Details</Text>
       <TextInput
@@ -142,9 +129,6 @@ const App: React.FC = () => {
         onChangeText={(text) => setUserDetails({ ...userDetails, email: text })} />
       <Button title="Submit" onPress={handleFormSubmit} />
     </View>
-    
-
-
       </View>
   );
 

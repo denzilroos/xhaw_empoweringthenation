@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet,Button } from 'react-native';
-import { WebView } from 'react-native-webview';
 import MapView, { Marker } from 'react-native-maps';
 
 export default function contactdetailsScreen() {
@@ -82,8 +81,6 @@ export default function contactdetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
-   // alignItems: 'center',
    padding:20
   },
  

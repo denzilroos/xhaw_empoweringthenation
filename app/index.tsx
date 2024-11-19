@@ -1,6 +1,5 @@
 import { Link } from 'expo-router';
-import { View, Text, StyleSheet, Button,Image, ImageBackground } from 'react-native';
-import { FlatList } from 'react-native-reanimated/lib/typescript/Animated';
+import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
 
 export default function HomeScreen() {
   return (
@@ -56,7 +55,6 @@ const styles = StyleSheet.create({
     flex: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    //marginBottom:50,
     textAlign:'center',
     fontSize: 18,
     borderWidth: 4,
@@ -72,11 +70,7 @@ const styles = StyleSheet.create({
 imgcontainer: {
   flex: 0.4,
   justifyContent:'center',
- // alignItems: 'center',
-  resizeMode:'center',
-  //borderWidth: 4,
- // borderColor: '#20232a',
-  //borderRadius: 20,
+  resizeMode:'center'
   
   
 },

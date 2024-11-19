@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet,Button,ImageBackground } from 'react-native';
+import { View, Text, StyleSheet,ImageBackground } from 'react-native';
 import { Link } from 'expo-router';
-import {Tabs} from 'expo-router';
+
 
 export default function sixmonth_coursesScreen() {
   return (
@@ -24,10 +24,7 @@ export default function sixmonth_coursesScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
-   // alignItems: 'center',
-   // borderWidth:50,
-   // borderColor:'#5c81bd'
+   
 
   },
   summarycontainer: {
@@ -36,7 +33,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor:'#e6ffe6',
     borderRadius:20,
-    //margin:10,
     padding:20
     
   },
@@ -52,7 +48,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding:20,
     backgroundColor:'#ccf2ff',
-    //marginBottom:20,
   },
   bgimgcontainer: {
     flex: 1,

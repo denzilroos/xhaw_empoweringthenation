@@ -1,5 +1,4 @@
-import { View, Text, StyleSheet,Button,Image } from 'react-native';
-import { Link } from 'expo-router';
+import { View, Text, StyleSheet,Image } from 'react-native';
 
 export default function cookingScreen() {
   return (
@@ -27,37 +26,21 @@ export default function cookingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1.2,
-    //justifyContent: 'center',
-    //alignItems: 'center',
     textAlign:'left',
-    //borderWidth: 4,
-    //borderColor: '#20232a',
-    //borderRadius: 20,
     margin:20
   },
   contentcontainer: {
     flex: 1.2,
-    //justifyContent: 'center',
-    //alignItems: 'center',
     textAlign:'left',
     borderWidth: 1,
     borderColor: '#20232a',
     borderRadius: 20,
-    
     padding:20
-   
-
-    //margin:20
   },
   imgcontainer: {
     flex: 0.5,
     justifyContent:'center',
     alignItems: 'center',
     resizeMode:'center',
-    //borderWidth: 4,
-   // borderColor: '#20232a',
-   // borderRadius: 20,
-    //width:400,
-    //height:400
   }
 });
